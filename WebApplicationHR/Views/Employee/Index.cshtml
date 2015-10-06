@@ -25,12 +25,13 @@
 <table class="table">
     <tr>
         <th>
-         First Name
+       Photo        
         </th>
         <th>
-            @Html.ActionLink("Last Name", "Index", new {sortOrder=ViewBag.SortingName})
+        First Name
         <th>
-           Photo
+            @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.SortingName })
+         
         </th>
         
     </tr>
@@ -38,15 +39,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FName)
+            <img width="80" height="80" src="@Url.Content("~/Images/profile/" + System.IO.Path.GetFileName(item.image))" />
+            
         </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.FName)
+        </td>
+       
+        
         <td>
             @Html.DisplayFor(modelItem => item.LName)
-        </td>
-        
-        
-        <td>
-            <img width="80" height="80"  src="@Url.Content("~/Images/profile/" + System.IO.Path.GetFileName(item.image))" />
         </td>
         <td>
             <ul class="button-bar">
