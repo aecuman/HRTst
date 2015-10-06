@@ -1,0 +1,405 @@
+﻿@model WebApplicationHR.Models.DM.HR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <dl class="form-horizontal">
+        <div class="person">
+            <div class="form-group">
+                <img width="150" height="150" src="@Url.Content("~/Images/profile/" + System.IO.Path.GetFileName(Model.image))" />
+            </div>
+            <div class="names">
+                <div class="form-group">
+
+                    <label class="control-label col-md-4"> First Name</label>
+                    <div class="text-left col-md-6" >
+                        @Html.DisplayFor(model => model.FName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4"> Middle Name</label>
+                    <div class="text-left col-md-6">
+                        @Html.DisplayFor(model => model.MName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Last Name</label>
+                    <div class="text-left col-md-6">
+                        @Html.DisplayFor(model => model.LName)
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="person">
+                <ul class="tabs center">
+                    <li><a href="#tabr1">Bio Data</a></li>
+                    <li><a href="#tabr2">Education</a></li>
+                    <li><a href="#tabr3">Employment Experience</a></li>
+                    <li><a href="#tabr4">Emergency Contact</a></li>
+                   
+                </ul>
+                <div id="tabr1" class="tab-content">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Gender, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6" >
+                            @Html.DisplayFor(model => model.Gender)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Current residence</label>
+                        <div class="text-left col-md-6" >
+                            @Html.DisplayFor(model => model.c_residence)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.address, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Mobile Number</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.m_number)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.email, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.email)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Distance from work</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.d_work)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Rental Status</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.r_status)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Marital Status</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.m_status)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Number of children</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.n_kids)
+
+                        </div>
+</div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Starting Date</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.s_date)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.branch, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.branch)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.title, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.title)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.salary, new { @class = "control-label col-md-4" })
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.salary)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Official Day Off</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.off_day)
+
+                        </div>
+                    </div>
+                </div>
+                <div id="tabr2" class="tab-content">
+                    <h2>Educational Background</h2>
+                    <h3>University</h3>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">University</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.u_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">University Address</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.u_address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Period of Study</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.u_years)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Graduated or Not</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.u_grad)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Degree Obtained</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.degree)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Vocational Institution</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.v_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Years of Study</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.v_years)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Certificate Obtained</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.v_training)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">A Level School</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.sa_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">A Level School Address</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.sa_address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Years</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.sa_years)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">O Level School</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.so_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Address</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.so_address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Years Spent</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.so_years)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Primary School</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.p_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Address</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.p_address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">National ID Number</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.nid_number)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">NSSF Number</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.nssf)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Driving Licence Number</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.dr_li)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Expiry Date</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.dr_li_exp)
+
+                        </div>
+                    </div>
+                </div>
+                <div id="tabr3" class="tab-content">
+                    <h3>Employment experience</h3>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Previous Job</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.pre_job)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Position</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.position)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Period spent at Previous Job</label>
+                            <div class="text-left col-md-6">
+                                @Html.DisplayFor(model => model.time)
+
+                            </div>
+</div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Name of Previous Employer</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.emp_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Address of Previous Employer</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.emp_address)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Name of Previous Supervisor</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.supervisor)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4"> Last day at previous job</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.last_day)
+
+                        </div>
+                    </div>
+                </div>
+                <div id="tabr4" class="tab-content">
+                    <div class="form-group">
+                        <label class="control-label col-md-4"> Emergency Contact Person</label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.emer_name)
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4"> Emergency Contact </label>
+                        <div class="text-left col-md-6">
+                            @Html.DisplayFor(model => model.emer_number)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

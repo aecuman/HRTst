@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-WebApplicationHR-20150910023154.mdf;Initial Catalog=aspnet-WebApplicationHR-20150910023154;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\mokure\\documents\\visual\ studio\ 2013\\Projects\\WebApplicationHR\\WebApplicationHR\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="EmployeeEntities-Web.config Connection String" description="EmployeeEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.DM.Employee.csdl|res://*/Models.DM.Employee.ssdl|res://*/Models.DM.Employee.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\v11.0;attachdbfilename=|DataDirectory|\Employees.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\mokure\\documents\\visual\ studio\ 2013\\Projects\\WebApplicationHR\\WebApplicationHR\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EmployeeEntities']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FName" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="MName" Type="nchar" MaxLength="50" />
+    <Property Name="LName" Type="nchar" MaxLength="50" />
+    <Property Name="Gender" Type="nchar" MaxLength="20" />
+    <Property Name="c_residence" Type="nchar" MaxLength="50" />
+    <Property Name="address" Type="nchar" MaxLength="50" />
+    <Property Name="m_number" Type="nchar" MaxLength="50" />
+    <Property Name="email" Type="nchar" MaxLength="50" />
+    <Property Name="d_work" Type="nchar" MaxLength="20" />
+    <Property Name="r_status" Type="nchar" MaxLength="20" />
+    <Property Name="m_status" Type="nchar" MaxLength="20" />
+    <Property Name="n_kids" Type="int" />
+    <Property Name="s_date" Type="nchar" MaxLength="20" />
+    <Property Name="branch" Type="nchar" MaxLength="20" />
+    <Property Name="title" Type="nchar" MaxLength="50" />
+    <Property Name="salary" Type="nchar" MaxLength="20" />
+    <Property Name="off_day" Type="nchar" MaxLength="20" />
+    <Property Name="u_name" Type="nchar" MaxLength="50" />
+    <Property Name="u_address" Type="nchar" MaxLength="50" />
+    <Property Name="u_years" Type="nchar" MaxLength="20" />
+    <Property Name="u_grad" Type="nchar" MaxLength="20" />
+    <Property Name="degree" Type="nchar" MaxLength="100" />
+    <Property Name="v_name" Type="nchar" MaxLength="50" />
+    <Property Name="v_years" Type="nchar" MaxLength="20" />
+    <Property Name="v_training" Type="nchar" MaxLength="50" />
+    <Property Name="sa_name" Type="nchar" MaxLength="50" />
+    <Property Name="sa_address" Type="nchar" MaxLength="50" />
+    <Property Name="sa_years" Type="nchar" MaxLength="20" />
+    <Property Name="so_name" Type="nchar" MaxLength="50" />
+    <Property Name="so_address" Type="nchar" MaxLength="50" />
+    <Property Name="so_years" Type="nchar" MaxLength="20" />
+    <Property Name="p_name" Type="nchar" MaxLength="50" />
+    <Property Name="p_address" Type="nchar" MaxLength="50" />
+    <Property Name="nid_number" Type="nchar" MaxLength="50" />
+    <Property Name="nssf" Type="nchar" MaxLength="50" />
+    <Property Name="dr_li" Type="nchar" MaxLength="50" />
+    <Property Name="dr_li_exp" Type="nchar" MaxLength="50" />
+    <Property Name="pre_job" Type="nchar" MaxLength="50" />
+    <Property Name="position" Type="nchar" MaxLength="50" />
+    <Property Name="time" Type="nchar" MaxLength="20" />
+    <Property Name="emp_name" Type="nchar" MaxLength="50" />
+    <Property Name="emp_address" Type="nchar" MaxLength="50" />
+    <Property Name="supervisor" Type="nchar" MaxLength="50" />
+    <Property Name="last_day" Type="nchar" MaxLength="20" />
+    <Property Name="emer_name" Type="nchar" MaxLength="50" />
+    <Property Name="emer_number" Type="nchar" MaxLength="50" />
+    <Property Name="image" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="EmployeeModelStoreContainer">
+    <EntitySet Name="HR" EntityType="Self.HR" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,381 @@
+﻿@model WebApplicationHR.Models.DM.HR
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm()) 
+{
+     
+    @Html.AntiForgeryToken()
+   
+    <div class="form-horizontal">
+        <h4>Employment Form</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        
+            <div class="form-group">                
+                <label class="control-label col-md-2"> First Name</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FName)
+                    @Html.ValidationMessageFor(model => model.FName)
+                </div>
+            </div>
+            <div class="form-group">
+                 <label class="control-label col-md-2"> Last Name</label>
+                 <div class="col-md-10">
+                     @Html.EditorFor(model => model.LName)
+                     @Html.ValidationMessageFor(model => model.LName)
+                 </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Middle Name</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.MName)
+                   @Html.ValidationMessageFor(model => model.MName)
+               </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Gender</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Gender)
+                    @Html.ValidationMessageFor(model => model.Gender)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Place of residence</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.c_residence)
+                    @Html.ValidationMessageFor(model => model.c_residence)
+                </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Address</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.address)
+                   @Html.ValidationMessageFor(model => model.address)
+               </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Mobile Number</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.m_number)
+                    @Html.ValidationMessageFor(model => model.m_number)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Email</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.email)
+                    @Html.ValidationMessageFor(model => model.email)
+                </div>
+            </div>
+            <div class="form-group">  
+                    <label class="control-label col-md-2"> Distance from work</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.d_work)
+                    @Html.ValidationMessageFor(model => model.d_work)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Renting Status</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.r_status)
+                    @Html.ValidationMessageFor(model => model.r_status)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Marital Status</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.m_status)
+                    @Html.ValidationMessageFor(model => model.m_status)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Number of Children</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.n_kids)
+                    @Html.ValidationMessageFor(model => model.n_kids, "This field must be a number")
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Starting Date</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.s_date)
+                    @Html.ValidationMessageFor(model => model.s_date, "This field must be a date")
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Branch</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.branch)
+                    @Html.ValidationMessageFor(model => model.branch)
+                </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Job Title</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.title)
+                   @Html.ValidationMessageFor(model => model.title)
+               </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2">Salary</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.salary)
+                   @Html.ValidationMessageFor(model => model.salary)
+               </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Official Day Off</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.off_day)
+                    @Html.ValidationMessageFor(model => model.off_day)
+                </div>
+            </div>
+
+            <h2>Educational Background</h2>
+            <h3>University Education</h3>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> University Name</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.u_name)
+                    @Html.ValidationMessageFor(model => model.u_name)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> University Address</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.u_address)
+                    @Html.ValidationMessageFor(model => model.u_address)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Years Spent</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.u_years)
+                    @Html.ValidationMessageFor(model => model.u_years)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Graduated or Not</label>
+                <div class="col-md-10">
+                    <div>
+                        @Html.RadioButtonFor(model => model.u_grad, "True") Yes
+                    </div>
+
+                    <div> @Html.RadioButtonFor(model => model.u_grad, "False") No</div>
+                    @Html.ValidationMessageFor(model => model.u_grad)
+                </div>
+            </div>
+
+           <div class="form-group">  
+                    <label class="control-label col-md-2"> Degree obtained</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.degree)
+                   @Html.ValidationMessageFor(model => model.degree)
+               </div>
+            </div>
+            <h3>Vocational Training</h3>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Name</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.v_name)
+                    @Html.ValidationMessageFor(model => model.v_name)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Years Spent</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.v_years)
+                    @Html.ValidationMessageFor(model => model.v_years)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Training attained</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.v_training)
+                    @Html.ValidationMessageFor(model => model.v_training)
+                </div>
+            </div>
+            <h3>A Level Education</h3>
+          <div class="form-group">  
+              <label class="control-label col-md-2"> Name</label>
+              <div class="col-md-10">
+                  @Html.EditorFor(model => model.sa_name)
+                  @Html.ValidationMessageFor(model => model.sa_name)
+              </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Address</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.sa_address)
+                   @Html.ValidationMessageFor(model => model.sa_address)
+               </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Years Spent</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.sa_years)
+                   @Html.ValidationMessageFor(model => model.sa_years)
+               </div>
+            </div>
+            <h3>O Level Education</h3>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Name</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.so_name)
+                    @Html.ValidationMessageFor(model => model.so_name)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Address:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.so_address)
+                    @Html.ValidationMessageFor(model => model.so_address)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Years Spent</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.so_years)
+                    @Html.ValidationMessageFor(model => model.so_years)
+                </div>
+            </div>
+
+            <h3>Primary Education</h3>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Name</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.p_name)
+                    @Html.ValidationMessageFor(model => model.p_name)
+                </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2">Address:</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.p_address)
+                   @Html.ValidationMessageFor(model => model.p_address)
+               </div>
+            </div>
+    <div class="form-group">  
+        <label class="control-label col-md-2"> National ID Number</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.nid_number)
+            @Html.ValidationMessageFor(model => model.nid_number)
+        </div>
+            </div>
+          <div class="form-group">  
+              <label class="control-label col-md-2">NSSF Number</label>
+              <div class="col-md-10">
+                  @Html.EditorFor(model => model.nssf)
+                  @Html.ValidationMessageFor(model => model.nssf)
+              </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Driving licence Number</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.dr_li)
+                    @Html.ValidationMessageFor(model => model.dr_li)
+                </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Expiry Date</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.dr_li_exp)
+                   @Html.ValidationMessageFor(model => model.dr_li_exp)
+               </div>
+            </div>
+
+            <h3>Employment experience</h3>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Previous Job</label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.pre_job)
+                   @Html.ValidationMessageFor(model => model.pre_job)
+               </div>
+            </div>
+          <div class="form-group">  
+              <label class="control-label col-md-2"> Previous Position</label>
+              <div class="col-md-10">
+                  @Html.EditorFor(model => model.position)
+                  @Html.ValidationMessageFor(model => model.position)
+              </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Period spent at Previous Job</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.time)
+                    @Html.ValidationMessageFor(model => model.time)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2">Name of Previous Employer</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.emp_name)
+                    @Html.ValidationMessageFor(model => model.emp_name)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Address</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.emp_address)
+                    @Html.ValidationMessageFor(model => model.emp_address)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Previous Supervisor</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.supervisor)
+                    @Html.ValidationMessageFor(model => model.supervisor)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Last day at previous job</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.last_day)
+                    @Html.ValidationMessageFor(model => model.last_day)
+                </div>
+            </div>
+            <div class="form-group">  
+                <label class="control-label col-md-2"> Emergency Contact Person</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.emer_name)
+                    @Html.ValidationMessageFor(model => model.emer_name)
+                </div>
+            </div>
+           <div class="form-group">  
+               <label class="control-label col-md-2"> Emergency Contact </label>
+               <div class="col-md-10">
+                   @Html.EditorFor(model => model.emer_number)
+                   @Html.ValidationMessageFor(model => model.emer_number)
+               </div>
+            </div>
+          <div class="form-group">  
+              <label class="control-label col-md-2"> Insert Photo</label>
+              <div class="col-md-10">
+                  <input type="file" name="img" />
+              </div>
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+
+       
+        </div>
+    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+@Styles.Render("~/Content/css")
+}

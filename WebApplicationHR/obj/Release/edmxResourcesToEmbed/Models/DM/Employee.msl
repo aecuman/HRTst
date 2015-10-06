@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeeModelStoreContainer" CdmEntityContainer="EmployeeEntities">
+    <EntitySetMapping Name="HRs">
+      <EntityTypeMapping TypeName="EmployeeModel.HR">
+        <MappingFragment StoreEntitySet="HR">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="c_residence" ColumnName="c_residence" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="m_number" ColumnName="m_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="d_work" ColumnName="d_work" />
+          <ScalarProperty Name="r_status" ColumnName="r_status" />
+          <ScalarProperty Name="m_status" ColumnName="m_status" />
+          <ScalarProperty Name="n_kids" ColumnName="n_kids" />
+          <ScalarProperty Name="s_date" ColumnName="s_date" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="off_day" ColumnName="off_day" />
+          <ScalarProperty Name="u_name" ColumnName="u_name" />
+          <ScalarProperty Name="u_address" ColumnName="u_address" />
+          <ScalarProperty Name="u_years" ColumnName="u_years" />
+          <ScalarProperty Name="u_grad" ColumnName="u_grad" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="v_name" ColumnName="v_name" />
+          <ScalarProperty Name="v_years" ColumnName="v_years" />
+          <ScalarProperty Name="v_training" ColumnName="v_training" />
+          <ScalarProperty Name="sa_name" ColumnName="sa_name" />
+          <ScalarProperty Name="sa_address" ColumnName="sa_address" />
+          <ScalarProperty Name="sa_years" ColumnName="sa_years" />
+          <ScalarProperty Name="so_name" ColumnName="so_name" />
+          <ScalarProperty Name="so_address" ColumnName="so_address" />
+          <ScalarProperty Name="so_years" ColumnName="so_years" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="p_address" ColumnName="p_address" />
+          <ScalarProperty Name="nid_number" ColumnName="nid_number" />
+          <ScalarProperty Name="nssf" ColumnName="nssf" />
+          <ScalarProperty Name="dr_li" ColumnName="dr_li" />
+          <ScalarProperty Name="dr_li_exp" ColumnName="dr_li_exp" />
+          <ScalarProperty Name="pre_job" ColumnName="pre_job" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_address" ColumnName="emp_address" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="last_day" ColumnName="last_day" />
+          <ScalarProperty Name="emer_name" ColumnName="emer_name" />
+          <ScalarProperty Name="emer_number" ColumnName="emer_number" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="LName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="c_residence" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="m_number" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="d_work" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="r_status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="m_status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="n_kids" Type="Int32" />
+    <Property Name="s_date" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+    <Property Name="branch" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="salary" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="off_day" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="u_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="u_address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="u_years" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="u_grad" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="degree" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="v_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="v_years" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="v_training" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="sa_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="sa_address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="sa_years" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="so_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="so_address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="so_years" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="p_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="p_address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="nid_number" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="nssf" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="dr_li" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="dr_li_exp" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="pre_job" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="time" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="emp_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="emp_address" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="supervisor" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="last_day" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="emer_name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="emer_number" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="EmployeeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HRs" EntityType="Self.HR" />
+  </EntityContainer>
+</Schema>
